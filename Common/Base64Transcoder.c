@@ -105,6 +105,7 @@ const u_int8_t kBits_11111100 = 0xFC;
 
 size_t EstimateBas64EncodedDataSize(size_t inDataSize, int32_t inFlags)
 {
+#pragma unused (inFlags)
 size_t theEncodedDataSize = (int)ceil(inDataSize / 3.0) * 4;
 theEncodedDataSize = theEncodedDataSize / 72 * 74 + theEncodedDataSize % 72 + 1;
 return(theEncodedDataSize);
@@ -112,6 +113,7 @@ return(theEncodedDataSize);
 
 size_t EstimateBas64DecodedDataSize(size_t inDataSize, int32_t inFlags)
 {
+#pragma unused (inFlags)
 size_t theDecodedDataSize = (int)ceil(inDataSize / 4.0) * 3;
 //theDecodedDataSize = theDecodedDataSize / 72 * 74 + theDecodedDataSize % 72;
 return(theDecodedDataSize);

@@ -167,8 +167,8 @@ if ([self scanString:@"." intoString:NULL])
 
 if (theResult == YES)
 	{
-//	if (outNumber != NULL)
-//		outNumber = [NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@%@.%@", theSign, theInteger, theFraction] floatValue]];
+	if (outNumber != NULL)
+		outNumber = [NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@%@.%@", theSign, theInteger, theFraction] floatValue]];
 	}
 return(theResult);
 }
