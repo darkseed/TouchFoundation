@@ -39,6 +39,17 @@
 
 @synthesize defaultMergePolicy;
 
+- (void)dealloc
+{
+[[NSNotificationCenter defaultCenter] removeObserver:self name:NSManagedObjectContextDidSaveNotification object:NULL];
+
+[defaultMergePolicy release];
+defaultMergePolicy = NULL;
+//
+[super dealloc];
+}
+
+
 - (NSManagedObjectContext *)newManagedObjectContext
 {
 NSManagedObjectContext *theManagedObjectContext = [super newManagedObjectContext];

@@ -79,6 +79,8 @@ error = NULL;
 temporaryData = NULL;
 [defaultCredential release];
 defaultCredential = NULL;
+[userInfo release];
+userInfo = NULL;
 //
 [super dealloc];
 }

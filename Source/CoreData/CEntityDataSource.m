@@ -59,6 +59,7 @@ return(self);
 
 - (void)dealloc
 {
+self.managedObjectContext = NULL;
 self.entityDescription = NULL;
 self.predicate = NULL;
 self.items = NULL;

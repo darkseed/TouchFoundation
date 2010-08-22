@@ -76,6 +76,7 @@ return(theDate);
 - (NSString *)ISO8601String
 {
 ISO8601DateFormatter *theFormatter = [[[ISO8601DateFormatter alloc] init] autorelease];
+theFormatter.includeTime = YES;
 NSString *theDateString = [theFormatter stringFromDate:self];
 return(theDateString);
 }
